@@ -13,7 +13,8 @@ var Letter = function(character) {
     this.character = character.toUpperCase();
 
     this.letterGuessedCorrectly = false;
-
+	// this function will display the letter that is guessed,
+	//conversly if a letter is not guessed it will hold a placeholder.
 
     this.showCharacter = function() {
 		if (this.letterGuessedCorrectly) {
