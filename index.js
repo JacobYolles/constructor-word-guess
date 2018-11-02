@@ -44,6 +44,8 @@ var slotsFilledIn = 0;
 
 // Create the logic to make the game run!
 
+
+
 figlet("Hangman Game", function(err, data) {
     if (err) {
         console.log('Something went wrong...');
@@ -51,13 +53,22 @@ figlet("Hangman Game", function(err, data) {
         return;
     }
     console.log(data)
+
+    figlet("     Theme: Colors", function(err, data) {
+        if (err) {
+            console.log("Something went wrong...");
+            console.dir(err);
+            return;
+        }
+        console.log(data)
+    })
     //Welcome screen text.
     console.log(gameTextColor("Welcome to my Hangman Game!"));
     console.log(gameTextColor("The theme of the game will be colors!"));
     //Game instructions.
     var howToPlay = 
     "==========================================================================================================" + "\r\n" +
-    "How to play" + "\r\n" +
+    "How to play:" + "\r\n" +
     "==========================================================================================================" + "\r\n" +
     "When prompted to enter a letter, press any letter (a-z) on the keyboard to guess a letter." + "\r\n" +
     "Keep guessing letters. When you guess a letter, your choice will either be correct or incorrect." + "\r\n" +
@@ -105,3 +116,16 @@ function confirmStart() {
 		}
 	});
 }
+
+// create the functionality to allow the game to start.
+function startGame(){
+    // allow the user 10 remaining guesses to get to the right answer.
+    guessesRemaining = 10;
+    // have the system pick a random word from the word list.
+    chooseRandomWord();
+    // When the game is started we clear each list.
+    lettersAlreadyGuessedList = "";
+	lettersAlreadyGuessedListArray = [];
+}
+
+// create the ability to generate the random word from the random word list variable.
