@@ -21,7 +21,7 @@ var Word = function(myWord) {
 
     this.splitWord = function() {
         this.letters = this.myWord.split("")
-        console.log(this.letters)
+        // console.log(this.letters)
 
         // create the ability to determine the amount of underscores needed
         numberUnderscoresNeeded = this.letters.length

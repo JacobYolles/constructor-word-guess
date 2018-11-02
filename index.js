@@ -21,7 +21,7 @@ var gameTextColor = clc.cyanBright;
 var userGuessedCorrectly = false;
 // Initially set to false this allows boolean flagging to change this to true.
 // Creates the word bank, the pre deterimined list of words that will be picked from for the user to guess at trying to solve.
-var wordList = ["red", "blue", "green", "violet", "purple", "indigo", "yellow", "orange", "maroon", "cyan", "aquamarine"]
+var wordList = ["red", "blue", "green", "violet", "purple", "indigo", "yellow", "orange", "maroon", "cyan", "aquamarine"];
 
 // Create the ability for the word to be chosen from the random word list.
 var randomWord;
@@ -30,7 +30,7 @@ var someWord;
 // Create the counters for wins, losses, and guesses remaining.
 var wins = 0;
 var losses = 0;
-var guessesRemaining = 20;
+var guessesRemaining = 10;
 
 // Create a variable for the base guess of the user into the inquirer prompt.
 var userGuess = "";
@@ -138,8 +138,8 @@ function chooseRandomWord() {
     console.log(gameTextColor("The word you are guessing contains " + randomWord.length + " letters"));
     console.log(gameTextColor("WORD TO GUESS: "));
 
-    someWord.splitWord();
-    someWord.generateLetters();
+    // someWord.splitWord();
+    // someWord.generateLetters();
     guessLetter();
 }
 
@@ -161,7 +161,7 @@ function guessLetter() {
                     }
                 }
             }
-        ]).then(function (guess) {
+        ]).then(function(guess) {
             // convert all the letters that the user has guessed to uppercase.
             guess.letter.toUpperCase();
             console.log(gameTextColor("You guessed: " + guess.letter.toUpperCase()));
@@ -247,7 +247,7 @@ function checkIfUserWon() {
     // create an else if condition.
     else if (slotsFilledIn === someWord.letters.length) {
 		console.log(gameTextColor("====================================================================="));
-		console.log(correct("YOU WON! YOU'RE A TRUE MINNESOTAN!"));
+		console.log(correct("YOU WON! YOU REALLY KNOW YOUR COLOURS!"));
 		//Increment win counter by 1.
 		wins++;
 		//Show total wins and losses.

@@ -22,7 +22,7 @@ var Letter = function(character) {
 		}
 		else {
 
-            console.log ("_");
+            // console.log ("_");
 		}
 
 	}
