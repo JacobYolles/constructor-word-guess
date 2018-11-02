@@ -1,0 +1,26 @@
+{
+  "name": "constructor-word-guess",
+  "version": "1.0.0",
+  "description": "Constructor word guess",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobYolles/constructor-word-guess.git"
+  },
+  "author": "Jake Yolles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacobYolles/constructor-word-guess/issues"
+  },
+  "homepage": "https://github.com/JacobYolles/constructor-word-guess#readme",
+  "dependencies": {
+    "boxen": "2.0.0",
+    "cli-color": "1.4.0",
+    "figlet": "1.2.1",
+    "inquirer": "6.2.0",
+    "is-letter": "^1.1.1"
+  }
+}

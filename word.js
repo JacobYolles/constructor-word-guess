@@ -29,6 +29,11 @@ var Word = function(myWord) {
         console.log(this.underscores.join(""))
     }
     this.generateLetters = function() {
+        for (i = 0; i < this.letters.length; i++) {
+            this.letters[i] = new Letter (this.letters[i]);
+
+            this.letters[i].showCharacter();
+        }
 
 
     }
