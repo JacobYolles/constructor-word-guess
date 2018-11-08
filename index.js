@@ -16,6 +16,8 @@ var correct = clc.green.bold;
 var incorrect = clc.red.bold;
 // give the base text of the game a teal color based on the CLC package.
 var gameTextColor = clc.cyanBright;
+var welcomeTextColor = clc.blue.bold
+var instructionsTextColor = clc.yellow
 
 // create a variable for if the user guesses correctly.
 var userGuessedCorrectly = false;
@@ -63,7 +65,7 @@ figlet("Hangman Game", function (err, data) {
         console.log(data)
     })
     //Welcome screen text.
-    console.log(gameTextColor("Welcome to my Hangman Game!"));
+    console.log(welcomeTextColor("Welcome to my Hangman Game!"));
     console.log(gameTextColor("The theme of the game will be colors!"));
     //Game instructions.
     var howToPlay =
@@ -81,7 +83,7 @@ figlet("Hangman Game", function (err, data) {
         "===========================================================================================================" + "\r\n" +
         "You can exit the game at any time by pressing Ctrl + C on your keyboard." + "\r\n" +
         "==========================================================================================================="
-    console.log(gameTextColor(howToPlay));
+    console.log(instructionsTextColor(howToPlay));
     //Ask user if they are ready to play.
     confirmStart();
 });
