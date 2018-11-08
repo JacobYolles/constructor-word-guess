@@ -105,13 +105,13 @@ function confirmStart() {
     inquirer.prompt(readyToStartGame).then(answers => {
         //If the user confirms that they want to play, start game.
         if (answers.readyToPlay) {
-            console.log(gameTextColor("Great! Welcome, " + answers.playerName + ". Let's begin..."));
+            console.log(gameTextColor("Great! Welcome, " + answers.playerName + ". Let's begin!"));
             startGame();
         }
 
         else {
             //If the user decides they don't want to play, exit game.
-            console.log(gameTextColor("Good bye, " + answers.playerName + "! Come back soon."));
+            console.log(gameTextColor("Good bye, " + answers.playerName + "! Come back soon!"));
             return;
         }
     });
